@@ -17,9 +17,9 @@ const Project = () => {
             <div className="mb-16">
               <div>
                 <p className="text-sm w-[450px] mt-4">
-                  I'm a paragraph. Click here to add your own text and edit me.
-                  It's easy. Just click "Edit Text" or double click me to add
-                  your own content and make changes to the font.
+                  I&#39;m a paragraph. Click here to add your own text and edit
+                  me. It&#39;s easy. Just click &quot;Edit Text&quot; or double
+                  click me to add your own content and make changes to the font.
                 </p>
               </div>
             </div>
@@ -44,9 +44,9 @@ const Project = () => {
             <div className="mb-16">
               <div>
                 <p className="text-sm w-[450px] mt-4">
-                  I'm a paragraph. Click here to add your own text and edit me.
-                  It's easy. Just click "Edit Text" or double click me to add
-                  your own content and make changes to the font.
+                  I&#39;m a paragraph. Click here to add your own text and edit
+                  me. It&#39;s easy. Just click &quot;Edit Text&quot; or double
+                  click me to add your own content and make changes to the font.
                 </p>
               </div>
             </div>
@@ -71,9 +71,9 @@ const Project = () => {
             <div className="mb-16">
               <div>
                 <p className="text-sm w-[450px] mt-4">
-                  I'm a paragraph. Click here to add your own text and edit me.
-                  It's easy. Just click "Edit Text" or double click me to add
-                  your own content and make changes to the font.
+                  I&#39;m a paragraph. Click here to add your own text and edit
+                  me. It&#39;s easy. Just click &quot;Edit Text&quot; or double
+                  click me to add your own content and make changes to the font.
                 </p>
               </div>
             </div>

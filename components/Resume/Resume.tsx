@@ -41,9 +41,9 @@ const ResumeLayout = () => {
               </div>
               <div>
                 <p className="text-sm md:ml-32">
-                  I'm a paragraph. Click here to add your own text and edit me.
-                  It's easy. Just click "Edit Text" or double click me to add
-                  your own content and make changes to the font.
+                  I&#39;m a paragraph. Click here to add your own text and edit
+                  me. It&#39;s easy. Just click &quot;Edit Text&quot; or double
+                  click me to add your own content and make changes to the font.
                 </p>
               </div>
             </div>
@@ -58,9 +58,9 @@ const ResumeLayout = () => {
               </div>
               <div>
                 <p className="text-sm md:ml-32 ">
-                  I'm a paragraph. Click here to add your own text and edit me.
-                  It's easy. Just click "Edit Text" or double click me to add
-                  your own content and make changes to the font.
+                  I&#39;m a paragraph. Click here to add your own text and edit
+                  me. It&#39;s easy. Just click &quot;Edit Text&quot; or double
+                  click me to add your own content and make changes to the font.
                 </p>
               </div>
             </div>
@@ -75,9 +75,9 @@ const ResumeLayout = () => {
               </div>
               <div>
                 <p className="text-sm md:ml-32 w-[300px]">
-                  I'm a paragraph. Click here to add your own text and edit me.
-                  It's easy. Just click "Edit Text" or double click me to add
-                  your own content and make changes to the font.
+                  I&#39;m a paragraph. Click here to add your own text and edit
+                  me. It&#39;s easy. Just click &quot;Edit Text&quot; or double
+                  click me to add your own content and make changes to the font.
                 </p>
               </div>
             </div>
@@ -132,15 +132,15 @@ const ResumeLayout = () => {
                 </div>
                 <div className="w-4/5">
                   <h3 className="font-bold text-gray-800">
-                    Establishment Name | Master’s Degree
+                    Establishment Name | Master&apos;s Degree
                   </h3>
                 </div>
               </div>
               <div>
                 <p className="text-sm md:ml-32 w-[300px]">
-                  I'm a paragraph. Click here to add your own text and edit me.
-                  It's easy. Just click "Edit Text" or double click me to add
-                  your own content and make changes to the font.
+                  I&apos;m a paragraph. Click here to add your own text and edit
+                  me. It&apos;s easy. Just click &quot;Edit Text&quot; or double
+                  click me to add your own content and make changes to the font.
                 </p>
               </div>
             </div>
