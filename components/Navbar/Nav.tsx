@@ -5,10 +5,10 @@ import { navLinks } from "@/constant/constant";
 import { Menu } from "lucide-react";
 import MobileNav from "./MobileNav";
 import { AnimatePresence } from "framer-motion";
-
+import { usePathname } from "next/navigation";
 const Navbar = () => {
   const [isMobileOpen, setIsMobileOpen] = React.useState<boolean>(false);
-
+  const pathname = usePathname();
   return (
     <div className="relative z-50">
       <nav className="absolute top-0 left-0 w-full flex justify-between items-center p-6 text-sm font-light ">
@@ -26,7 +26,11 @@ const Navbar = () => {
             <React.Fragment key={link.label}>
               <Link
                 href={link.href}
-                className="hover:text-yellow-600 transition-colors duration-200 text-base font-medium"
+                className={`transition-colors duration-200 text-base font-medium ${
+                  pathname === link.href
+                    ? "text-yellow-600"
+                    : "hover:text-yellow-600"
+                }`}
               >
                 {link.label}
               </Link>

@@ -4,12 +4,13 @@ import { navLinks } from "@/constant/constant";
 import { X } from "lucide-react";
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import { usePathname } from "next/navigation";
 type Props = {
   onClose: () => void;
 };
 
 const MobileNav = ({ onClose }: Props) => {
+  const pathname = usePathname();
   return (
     <AnimatePresence>
       <motion.div
@@ -19,9 +20,9 @@ const MobileNav = ({ onClose }: Props) => {
         transition={{ duration: 0.4, ease: "easeInOut" }}
         className="fixed inset-0 bg-white z-50 p-6 flex flex-col gap-4"
       >
-        <div className="flex justify-end items-center mb-6">
+        <div className="flex justify-end items-center mb-6 ">
           <button onClick={onClose}>
-            <X className="w-8 h-8" />
+            <X className="w-8 h-8 cursor-pointer" />
           </button>
         </div>
 
@@ -36,7 +37,11 @@ const MobileNav = ({ onClose }: Props) => {
               <Link
                 href={link.href}
                 onClick={onClose}
-                className="text-2xl hover:text-yellow-600 transition font-light"
+                className={`text-2xl hover:text-yellow-600 transition font-light ${
+                  pathname === link.href
+                    ? "text-yellow-600"
+                    : "hover:text-yellow-600"
+                }`}
               >
                 {link.label}
               </Link>
