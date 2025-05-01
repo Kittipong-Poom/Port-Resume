@@ -65,10 +65,11 @@ export const projects = [
     position: "Fullstack Developer",
     date: "8 May 2023 - 25 Oct 2024",
     images: "/images/projects/ambulance.png",
-    description: `Web Application Development to emergency Ambulance Units And Collect Annual Patient Data 
-    Using Nuxt.js for Web application with
-    Develop Framework With Vuetify and TailwindCSS
-    Development with NodeJs(Express.js) and MySQL`,
+    description: `Developed a web application to 
+    support emergency ambulance units and collect annual patient data.
+    The application was built using Nuxt.js 
+    with Vuetify and TailwindCSS for the frontend, and Node.js 
+    (Express.js) with MySQL for the backend.`,
     github: "https://github.com/Kittipong-Poom/Nuxtjs-Ambulance-Service",
     link: "https://my-newambulance.web.app/",
   },
@@ -78,7 +79,7 @@ export const projects = [
     position: "Frontend Developer",
     date: "7 June 2024 - 9 August 2024",
     images: "/images/projects/e-commerce-nextjs.png",
-    description: `Web Application Development for Buy and sell various figures and make a payment system with stripe.`,
+    description: `Developed a trading web application using Next.js, integrating Sanity.io for content management and Stripe for online payments, including a credit card checkout page.`,
     github: "https://github.com/Kittipong-Poom/e-commerce-nextjs",
     link: "https://e-commerce-nextjs-pi-henna.vercel.app/",
   },
@@ -88,7 +89,7 @@ export const projects = [
     position: "Frontend Developer",
     date: "12 February 2025 - 9 April 2025",
     images: "/images/projects/natrure-trip.png",
-    description: `I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click "Edit Text" or double click me to add your own content and make changes to the font.`,
+    description: `Built a nature tourism recommendation platform using Next.js, TailwindCSS, TypeScript, Shadcn, and Supabase for authentication. Features include user reviews and accommodation booking.`,
     github: "https://github.com/Kittipong-Poom/TravelTrips-NextJs",
     link: "https://travel-trips-ten.vercel.app/",
   },
@@ -98,6 +99,8 @@ export const projects = [
     position: "Frontend Developer",
     date: "internship 6 January 2025 - 30 April 2025",
     images: "/images/projects/hris3.png",
-    description: `I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click "Edit Text" or double click me to add your own content and make changes to the font.`,
+    description: `Developed the front-end of an HRIS (Human Resource Information System) to manage organizational employee data.
+Implemented scalable and efficient user interfaces using Nuxt.js with TypeScript.
+Collaborated with the UX/UI team to translate design prototypes into responsive, visually appealing web pages.`,
   },
 ];

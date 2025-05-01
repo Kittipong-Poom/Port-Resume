@@ -37,7 +37,7 @@ const Contact = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoadingSkeleton(false);
-    }, 1000);
+    }, 300);
   });
   return (
     <div className="w-full min-h-screen pt-44 container mx-auto">
@@ -66,13 +66,16 @@ const Contact = () => {
                 "Phone"
               )}
             </h2>
-            <div className="text-sm">
-              {loadingSkeleton ? (
-                <Skeleton className="w-32 h-6 bg-gray-200" />
-              ) : (
-                "062-0758133"
-              )}
-            </div>
+            {loadingSkeleton ? (
+              <Skeleton className="w-32 h-6 bg-gray-200" />
+            ) : (
+              <a
+                href="tel:0620758133"
+                className="text-sm text-blue-600 hover:underline"
+              >
+                062-0758133
+              </a>
+            )}
           </div>
 
           <div>
@@ -83,13 +86,16 @@ const Contact = () => {
                 "Email"
               )}
             </h2>
-            <div className="text-sm">
-              {loadingSkeleton ? (
-                <Skeleton className="w-48 h-6 bg-gray-200" />
-              ) : (
-                "kittipong.wong00@gmail.com"
-              )}
-            </div>
+            {loadingSkeleton ? (
+              <Skeleton className="w-48 h-6 bg-gray-200" />
+            ) : (
+              <a
+                href="mailto:kittipong.wong00@gmail.com"
+                className="text-blue-600 hover:underline"
+              >
+                kittipong.wong00@gmail.com
+              </a>
+            )}
           </div>
         </div>
         <div className="p-6 rounded-sm">

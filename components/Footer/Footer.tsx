@@ -9,13 +9,23 @@ const Footer = () => {
         {/* Phone Section */}
         <div className="col-span-1">
           <h1 className=" text-xl font-semibold">Phone</h1>
-          <p>062-0758133</p>
+          <a
+            href="tel:0620758133"
+            className="text-sm text-blue-600 hover:underline"
+          >
+            062-0758133
+          </a>
         </div>
 
         {/* Email Section */}
         <div className="col-span-1 ">
           <p className="text-xl font-semibold">Email</p>
-          <p>kittipong.wong00@gmail.com</p>
+          <a
+            href="mailto:kittipong.wong00@gmail.com"
+            className="text-blue-600 hover:underline"
+          >
+            kittipong.wong00@gmail.com
+          </a>
         </div>
 
         {/* Follow Me Section */}
@@ -47,7 +57,7 @@ const Footer = () => {
         {/* Copyright Section */}
         <div className="col-span-1 md:text-right text-left text-[12px] font-light w-[350px] text-gray-400">
           <p>© 2035 By Kittipong Wong.</p>
-          <p>Powered and secured by Me</p>
+          <p>Powered and secured by Poom</p>
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ const ResumeLayout = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 1100);
+    }, 400);
   }, []);
   return (
     <div className="min-h-screen max-w-7xl container mx-auto pt-32 ">
@@ -44,27 +44,27 @@ const ResumeLayout = () => {
             </div>
           )}
           {/* Right side - Timeline */}
+
           {isLoading ? (
             <Skeleton className="w-[500px] h-[200px] rounded-xl bg-gray-200 mb-6" />
           ) : (
-            <div className="md:p-12 p-6">
+            <div className="md:p-12 p-6 ">
               {internWorkExperience.map((exp) => {
                 return (
                   <div className="mb-12" key={exp.id}>
-                    <div className="flex flex-col md:flex-row mb-2">
-                      <div className="text-sm text-gray-600 md:w-2/8">
-                        {exp.year.split(" - ")[0]} - <br />{" "}
-                        {exp.year.split(" - ")[1]}
+                    <div className="grid md:grid-cols-12 mb-2 w-[550px]">
+                      {/* Year section - take up 3 columns and align right */}
+                      <div className="text-sm text-gray-600 md:col-span-3 md:text-left ">
+                        {exp.year.split(" - ")[0]} - {exp.year.split(" - ")[1]}
                       </div>
-                      <div className="md:w-4/5">
+                      {/* Content section - take up 9 columns */}
+                      <div className="md:col-span-9">
                         <h3 className="font-bold text-gray-800">
                           {exp.title} ({exp.company})
                         </h3>
                         <p>{exp.position}</p>
+                        <p className="text-sm mt-2">{exp.description}</p>
                       </div>
-                    </div>
-                    <div>
-                      <p className="text-sm md:ml-32">{exp.description}</p>
                     </div>
                   </div>
                 );
@@ -90,20 +90,20 @@ const ResumeLayout = () => {
             <div className="md:p-12 p-6">
               {education.map((edu) => (
                 <div className="mb-16" key={edu.id}>
-                  <div className="flex flex-col md:flex-row mb-2">
-                    <div className="w-2/8 text-sm text-gray-600">
+                  <div className="grid md:grid-cols-12 mb-2">
+                    {/* Year section - take up 3 columns and align right */}
+                    <div className="text-sm text-gray-600 md:col-span-3 md:text-left md:pr-8">
                       {edu.year}
                     </div>
-                    <div className="w-4/5">
+                    {/* Content section - take up 9 columns */}
+                    <div className="md:col-span-9">
                       <h3 className="font-bold text-gray-800">
                         {edu.title} | {edu.degree}
                       </h3>
+                      <p className="text-sm mt-2 w-[300px]">
+                        {edu.description}
+                      </p>
                     </div>
-                  </div>
-                  <div>
-                    <p className="text-sm md:ml-32 w-[300px]">
-                      {edu.description}
-                    </p>
                   </div>
                 </div>
               ))}
@@ -134,7 +134,7 @@ const ResumeLayout = () => {
                       className="flex flex-col md:flex-row mb-2 "
                     >
                       <div className="w-2/8 text-sm text-gray-600"></div>
-                      <div className="w-4/5 ml-0 md:ml-[83px]">
+                      <div className="w-2/5 ml-0 md:ml-[70px]">
                         <ul className="font-bold text-gray-800">
                           {skill.title}
                         </ul>

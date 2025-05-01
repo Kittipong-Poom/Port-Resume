@@ -14,7 +14,7 @@ const Project = () => {
     setTimeout(() => {
       setIsLoading(false);
       setIsImageLoading(false);
-    }, 1100);
+    }, 400);
   }, []);
   return (
     <div className="min-h-screen max-w-7xl container mx-auto pt-32 ">
@@ -28,11 +28,11 @@ const Project = () => {
         )}
         {projects.map((project) => {
           return (
-            <div className="grid md:grid-cols-2 grid-cols-1" key={project.id}>
+            <div className="grid md:grid-cols-2 grid-cols-1 " key={project.id}>
               {isLoading ? (
                 <Skeleton className="w-[500px] h-[300px] rounded-xl bg-gray-200" />
               ) : (
-                <div className="md:p-12 p-6">
+                <div className="md:p-12 p-6 ">
                   <h2 className="text-2xl font-bold text-black">
                     {project.title}{" "}
                   </h2>
@@ -72,16 +72,16 @@ const Project = () => {
                         "HRIS(Human Resource Information System)" && (
                         <div className="grid md:grid-cols-2 grid-cols-1 gap-2 ">
                           <button className="flex items-center bg-gray-900 text-white text-sm px-4 py-2 rounded hover:bg-gray-700 transition cursor-pointer">
-                            Open Modal User Manual
+                            User Manual
                           </button>
                           <button className="flex items-center bg-gray-900 text-white text-sm px-4 py-2 rounded hover:bg-gray-700 transition cursor-pointer">
-                            Open Modal WI
+                            WI
                           </button>
                           <button className="flex items-center bg-gray-900 text-white text-sm px-4 py-2 rounded hover:bg-gray-700 transition cursor-pointer">
-                            Open Modal AnnounceMent
+                            Announcement System
                           </button>
                           <button className="flex items-center bg-gray-900 text-white text-sm px-4 py-2 rounded hover:bg-gray-700 transition cursor-pointer">
-                            Open Modal User Manage Permission
+                            User Manage Permission
                           </button>
                         </div>
                       )}
@@ -97,14 +97,14 @@ const Project = () => {
                     setSelectedImage(project.images);
                     setIsOpen(true);
                   }}
-                  className="md:p-12 p-6 w-[385px] h-[385px] md:w-[650px] md:h-[650px]"
+                  className="md:p-12 p-6 w-[385px] h-[385px] md:w-[650px] md:h-[550px] overflow-hidden rounded-xl"
                 >
                   <Image
                     src={project.images}
                     alt="hero"
                     width={2080}
                     height={2080}
-                    className="w-full h-full object-fit  cursor-pointer rounded-xl"
+                    className="w-auto h-auto object-cover object-top rounded-xl cursor-pointer"
                     priority
                     onLoadingComplete={() => setIsImageLoading(false)}
                   />
