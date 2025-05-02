@@ -219,7 +219,6 @@ const Project = () => {
                     </video>
                   </div>
                 ) : (
-                  // Image gallery modal content
                   <Swiper
                     modules={[Navigation, Pagination]}
                     spaceBetween={20}
@@ -230,7 +229,7 @@ const Project = () => {
                   >
                     {selectedImages.map((img, index) => (
                       <SwiperSlide key={index}>
-                        <div className="flex items-center justify-center h-[70vh]">
+                        <div className="flex items-center justify-center h-[90vh] md:w-[1500px] mx-auto container">
                           <TransformWrapper>
                             <TransformComponent>
                               <img
