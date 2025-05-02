@@ -13,16 +13,22 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 const Project = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpenVideo, setIsOpenVideo] = useState<string | null>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [selectedImages, setSelectedImages] = useState<string[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isImageLoading, setIsImageLoading] = useState<boolean>(true);
   const openImageGroup = (images: string[]) => {
+    setIsOpenVideo(null);
     setSelectedImages(images);
     setIsModalOpen(true);
   };
-
+  const openVideo = (videoUrl: string) => {
+    setIsOpenVideo(videoUrl);
+    setSelectedImages([]);
+    setIsModalOpen(true);
+  };
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -100,7 +106,7 @@ const Project = () => {
                             }
                             className="bg-gray-900 text-white text-sm px-4 py-2 rounded hover:bg-gray-700 transition cursor-pointer"
                           >
-                            WI
+                            WI (Working method)
                           </button>
                           <button
                             onClick={() =>
@@ -121,6 +127,14 @@ const Project = () => {
                             className="bg-gray-900 text-white text-sm px-4 py-2 rounded hover:bg-gray-700 transition cursor-pointer"
                           >
                             Permission
+                          </button>
+                          <button
+                            onClick={() =>
+                              openVideo("images/projects/video/intern.mp4")
+                            }
+                            className="bg-gray-900 text-white text-sm px-4 py-2 rounded hover:bg-gray-700 transition cursor-pointer"
+                          >
+                            Video
                           </button>
                         </div>
                       )}
@@ -190,30 +204,47 @@ const Project = () => {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="p-4">
-                <Swiper
-                  modules={[Navigation, Pagination]}
-                  spaceBetween={20}
-                  slidesPerView={1}
-                  navigation
-                  pagination={{ clickable: true }}
-                  className="w-full h-full"
-                >
-                  {selectedImages.map((img, index) => (
-                    <SwiperSlide key={index}>
-                      <div className="flex items-center justify-center h-[70vh]">
-                        <TransformWrapper>
-                          <TransformComponent>
-                            <img
-                              src={img}
-                              alt={`Image ${index + 1}`}
-                              className="max-h-full max-w-full object-contain"
-                            />
-                          </TransformComponent>
-                        </TransformWrapper>
-                      </div>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
+                {isOpenVideo ? (
+                  // Video modal content
+                  <div className="flex justify-center items-center">
+                    <video
+                      controls
+                      autoPlay
+                      width="100%"
+                      height="auto"
+                      className="rounded-lg"
+                    >
+                      <source src={isOpenVideo} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                ) : (
+                  // Image gallery modal content
+                  <Swiper
+                    modules={[Navigation, Pagination]}
+                    spaceBetween={20}
+                    slidesPerView={1}
+                    navigation
+                    pagination={{ clickable: true }}
+                    className="w-full h-full"
+                  >
+                    {selectedImages.map((img, index) => (
+                      <SwiperSlide key={index}>
+                        <div className="flex items-center justify-center h-[70vh]">
+                          <TransformWrapper>
+                            <TransformComponent>
+                              <img
+                                src={img}
+                                alt={`Image ${index + 1}`}
+                                className="max-h-full max-w-full object-contain"
+                              />
+                            </TransformComponent>
+                          </TransformWrapper>
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                )}
               </div>
             </div>
           </div>

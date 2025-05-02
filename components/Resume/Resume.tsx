@@ -100,8 +100,7 @@ const ResumeLayout = () => {
                         {edu.title} | {edu.degree}
                       </h3>
                       <p className="text-sm mt-2 w-[300px] md:w-full">
-                        School of Information Technology, Major in Software
-                        Engineering
+                        {edu.description}
                       </p>
                       <p className="text-sm mt-2">{edu.gpax}</p>
                     </div>
@@ -125,24 +124,20 @@ const ResumeLayout = () => {
           {/* Right side - Timeline */}
           <div className="md:p-12 p-6">
             {isLoading ? (
-              <Skeleton className="w-[500px]  h-[400px] rounded-xl bg-gray-200" />
+              <Skeleton className="w-[500px] h-[400px] rounded-xl bg-gray-200" />
             ) : (
-              <div className="grid grid-cols-2 gap-4">
-                {skills.map((skill) => {
-                  return (
-                    <div
-                      key={skill.id}
-                      className="flex flex-col md:flex-row mb-2 "
-                    >
-                      <div className="w-2/8 text-sm text-gray-600"></div>
-                      <div className="w-2/5 ml-0 md:ml-[70px]">
-                        <ul className="font-bold text-gray-800">
-                          {skill.title}
-                        </ul>
-                      </div>
+              <div className="space-y-6">
+                {skills.map((skill) => (
+                  <div key={skill.id} className="grid md:grid-cols-12  mb-2">
+                    {/* Left section - เหมือนฝั่ง year */}
+                    <div className="text-sm text-gray-600 md:col-span-3 md:text-left md:pr-8"></div>
+
+                    {/* Right section - รายละเอียด */}
+                    <div className="md:col-span-9">
+                      <ul className="font-bold text-gray-800">{skill.title}</ul>
                     </div>
-                  );
-                })}
+                  </div>
+                ))}
               </div>
             )}
           </div>

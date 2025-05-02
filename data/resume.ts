@@ -13,35 +13,35 @@ export const education = [
 export const skills = [
   {
     id: 1,
-    title: "Nuxt.js",
+    title: "Nuxt.js (Intermediate)",
   },
   {
     id: 2,
-    title: "Next.js",
+    title: "Next.js (Basic)",
   },
   {
     id: 3,
-    title: "NodeJs(ExpressJS)",
+    title: "NodeJs(ExpressJS) (Intermediate)",
   },
   {
     id: 4,
-    title: "TailwindCSS",
+    title: "TailwindCSS (Intermediate)",
   },
   {
     id: 5,
-    title: "TypeScript",
+    title: "TypeScript (Basic)",
   },
   {
     id: 6,
-    title: "MySQL",
+    title: "MySQL (Basic)",
   },
   {
     id: 7,
-    title: "Authenticate (Superbase)",
+    title: "Authenticate (Superbase) (Basic)",
   },
   {
     id: 8,
-    title: "Vercel",
+    title: "Vercel (Basic)",
   },
 ];
 
