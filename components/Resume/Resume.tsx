@@ -4,7 +4,6 @@ import { education, skills, internWorkExperience } from "@/data/resume";
 import { Skeleton } from "@/components/ui/skeleton";
 const ResumeLayout = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
-
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -52,7 +51,7 @@ const ResumeLayout = () => {
               {internWorkExperience.map((exp) => {
                 return (
                   <div className="mb-12" key={exp.id}>
-                    <div className="grid md:grid-cols-12 mb-2 w-[550px]">
+                    <div className="grid md:grid-cols-12 mb-2 md:w-[550px]">
                       {/* Year section - take up 3 columns and align right */}
                       <div className="text-sm text-gray-600 md:col-span-3 md:text-left ">
                         {exp.year.split(" - ")[0]} - {exp.year.split(" - ")[1]}
@@ -91,7 +90,7 @@ const ResumeLayout = () => {
               {education.map((edu) => (
                 <div className="mb-16" key={edu.id}>
                   <div className="grid md:grid-cols-12 mb-2">
-                    {/* Year section - take up 3 columns and align right */}
+                    {/* Year section - take up 3 columns and align left */}
                     <div className="text-sm text-gray-600 md:col-span-3 md:text-left md:pr-8">
                       {edu.year}
                     </div>
@@ -100,9 +99,11 @@ const ResumeLayout = () => {
                       <h3 className="font-bold text-gray-800">
                         {edu.title} | {edu.degree}
                       </h3>
-                      <p className="text-sm mt-2 w-[300px]">
-                        {edu.description}
+                      <p className="text-sm mt-2 w-[300px] md:w-full">
+                        School of Information Technology, Major in Software
+                        Engineering
                       </p>
+                      <p className="text-sm mt-2">{edu.gpax}</p>
                     </div>
                   </div>
                 </div>

@@ -1,10 +1,12 @@
 export const education = [
   {
     id: 1,
-    title: "Mae Fah Lauang University",
-    degree: "Bachelor's degree",
+    title: "Mae Fah Luang University",
+    degree: "Bachelor's Degree",
     year: "2021 - 2025",
-    description: "Major in Software Engineering",
+    gpax: "GPAX: 3.19",
+    description:
+      "School of Information Technology, Major in Software Engineering",
   },
 ];
 
@@ -63,7 +65,7 @@ export const projects = [
     id: 1,
     title: "Ambulance Service",
     position: "Fullstack Developer",
-    date: "8 May 2023 - 25 Oct 2024",
+    date: "May 2023 - Oct 2024",
     images: "/images/projects/ambulance.png",
     description: `Developed a web application to 
     support emergency ambulance units and collect annual patient data.
@@ -77,7 +79,7 @@ export const projects = [
     id: 2,
     title: "FIGURESS E-COMMERCE",
     position: "Frontend Developer",
-    date: "7 June 2024 - 9 August 2024",
+    date: "June 2024 - August 2024",
     images: "/images/projects/e-commerce-nextjs.png",
     description: `Developed a trading web application using Next.js, integrating Sanity.io for content management and Stripe for online payments, including a credit card checkout page.`,
     github: "https://github.com/Kittipong-Poom/e-commerce-nextjs",
@@ -87,7 +89,7 @@ export const projects = [
     id: 3,
     title: "NATURE TRIP",
     position: "Frontend Developer",
-    date: "12 February 2025 - 9 April 2025",
+    date: "February 2025 - April 2025",
     images: "/images/projects/natrure-trip.png",
     description: `Built a nature tourism recommendation platform using Next.js, TailwindCSS, TypeScript, Shadcn, and Supabase for authentication. Features include user reviews and accommodation booking.`,
     github: "https://github.com/Kittipong-Poom/TravelTrips-NextJs",
@@ -102,5 +104,24 @@ export const projects = [
     description: `Developed the front-end of an HRIS (Human Resource Information System) to manage organizational employee data.
 Implemented scalable and efficient user interfaces using Nuxt.js with TypeScript.
 Collaborated with the UX/UI team to translate design prototypes into responsive, visually appealing web pages.`,
+    imageGroups: {
+      userManual: Array.from(
+        { length: 21 },
+        (_, i) => `/images/projects/manual/manual${i}.png`
+      ),
+      wi: Array.from(
+        { length: 9 },
+        (_, i) => `/images/projects/wi/wi${i + 1}.png`
+      ),
+
+      announcement: Array.from(
+        { length: 14 },
+        (_, i) => `/images/projects/announcement/ann${i + 1}.png`
+      ),
+      permission: Array.from(
+        { length: 36 },
+        (_, i) => `/images/projects/permission/per${i + 1}.png`
+      ),
+    },
   },
 ];
