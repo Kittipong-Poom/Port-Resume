@@ -29,6 +29,30 @@ const Project = () => {
     setSelectedImages([]);
     setIsModalOpen(true);
   };
+  const renderButton = (
+    href: string,
+    text: string,
+    icon: React.ReactNode,
+    bgColor: string,
+    hoverColor: string
+  ) => (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`flex items-center ${bgColor} ${hoverColor} text-white text-sm px-4 py-2 rounded transition`}
+    >
+      {text} {icon}
+    </a>
+  );
+  const renderActionButton = (label: string, onClick: () => void) => (
+    <button
+      onClick={onClick}
+      className="bg-gray-900 text-white text-sm px-4 py-2 rounded hover:bg-gray-700 transition cursor-pointer"
+    >
+      {label}
+    </button>
+  );
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -60,82 +84,71 @@ const Project = () => {
                     <p className="text-xl font-medium">{project.position}</p>
                   </div>
 
-                  <div className="mb-16">
-                    <div>
-                      <p className="text-sm md:w-[450px] w-[350px] mt-4">
-                        {project.description}
-                      </p>
+                  <div className="md:mb-16 ">
+                    <div className="flex space-x-4 mt-4 md:mt-0 mb-4 md:hidden">
+                      {project.github &&
+                        renderButton(
+                          project.github,
+                          "View on GitHub",
+                          <FaGithub className="ml-2 w-5 h-5" />,
+                          "bg-gray-900",
+                          "hover:bg-gray-700"
+                        )}
+                      {project.link &&
+                        renderButton(
+                          project.link,
+                          "Live Demo",
+                          <GrView className="ml-2 w-5 h-5" />,
+                          "bg-emerald-600",
+                          "hover:bg-emerald-500"
+                        )}
                     </div>
-                    <div className="flex space-x-4 mt-6">
-                      {project.github && (
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center bg-gray-900 text-white text-sm px-4 py-2 rounded hover:bg-gray-700 transition "
-                        >
-                          View on GitHub <FaGithub className="ml-2 w-5 h-5" />
-                        </a>
-                      )}
-                      {project.link && (
-                        <a
-                          href={project.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center bg-emerald-600 text-white text-sm px-4 py-2 rounded hover:bg-emerald-500 transition"
-                        >
-                          Live Demo <GrView className="ml-2 w-5 h-5" />
-                        </a>
-                      )}
+                    <p className="text-sm md:w-[450px] w-[350px] md:mt-4">
+                      {project.description}
+                    </p>
+                    <div className="hidden md:flex space-x-4 mt-6">
+                      {project.github &&
+                        renderButton(
+                          project.github,
+                          "View on GitHub",
+                          <FaGithub className="ml-2 w-5 h-5" />,
+                          "bg-gray-900",
+                          "hover:bg-gray-700"
+                        )}
+                      {project.link &&
+                        renderButton(
+                          project.link,
+                          "Live Demo",
+                          <GrView className="ml-2 w-5 h-5" />,
+                          "bg-emerald-600",
+                          "hover:bg-emerald-500"
+                        )}
+                    </div>
+                    <div className="md:flex space-x-4 mt-6 md:mt-0">
                       {project.title ===
                         "HRIS(Human Resource Information System)" && (
-                        <div className="grid md:grid-cols-2 grid-cols-2 gap-2 mt-6 ">
-                          <button
-                            onClick={() =>
-                              openImageGroup(
-                                project?.imageGroups?.userManual || []
-                              )
-                            }
-                            className="bg-gray-900 text-white text-sm px-4 py-2 rounded hover:bg-gray-700 transition cursor-pointer"
-                          >
-                            User Manual
-                          </button>
-                          <button
-                            onClick={() =>
-                              openImageGroup(project?.imageGroups?.wi || [])
-                            }
-                            className="bg-gray-900 text-white text-sm px-4 py-2 rounded hover:bg-gray-700 transition cursor-pointer"
-                          >
-                            WI (Working method)
-                          </button>
-                          <button
-                            onClick={() =>
-                              openImageGroup(
-                                project?.imageGroups?.announcement || []
-                              )
-                            }
-                            className="bg-gray-900 text-white text-sm px-4 py-2 rounded hover:bg-gray-700 transition cursor-pointer"
-                          >
-                            Announcement System
-                          </button>
-                          <button
-                            onClick={() =>
-                              openImageGroup(
-                                project?.imageGroups?.permission || []
-                              )
-                            }
-                            className="bg-gray-900 text-white text-sm px-4 py-2 rounded hover:bg-gray-700 transition cursor-pointer"
-                          >
-                            Permission
-                          </button>
-                          <button
-                            onClick={() =>
-                              openVideo("images/projects/video/intern.mp4")
-                            }
-                            className="bg-gray-900 text-white text-sm px-4 py-2 rounded hover:bg-gray-700 transition cursor-pointer"
-                          >
-                            Video
-                          </button>
+                        <div className="grid md:grid-cols-2 grid-cols-2 gap-2 ">
+                          {renderActionButton("User Manual", () =>
+                            openImageGroup(
+                              project?.imageGroups?.userManual || []
+                            )
+                          )}
+                          {renderActionButton("WI (Working method)", () =>
+                            openImageGroup(project?.imageGroups?.wi || [])
+                          )}
+                          {renderActionButton("Announcement System", () =>
+                            openImageGroup(
+                              project?.imageGroups?.announcement || []
+                            )
+                          )}
+                          {renderActionButton("Permission", () =>
+                            openImageGroup(
+                              project?.imageGroups?.permission || []
+                            )
+                          )}
+                          {renderActionButton("Video", () =>
+                            openVideo("images/projects/video/intern.mp4")
+                          )}
                         </div>
                       )}
                     </div>
