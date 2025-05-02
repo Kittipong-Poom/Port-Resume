@@ -189,7 +189,6 @@ const Project = () => {
               className="relative w-full max-w-4xl max-h-[90vh] md:max-w-[1600px] md:w-[1600px] md:max-h-[100vh] bg-white rounded-lg overflow-auto"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* เนื้อหา Swiper */}
               <div className="p-4">
                 <Swiper
                   modules={[Navigation, Pagination]}
@@ -202,11 +201,15 @@ const Project = () => {
                   {selectedImages.map((img, index) => (
                     <SwiperSlide key={index}>
                       <div className="flex items-center justify-center h-[70vh]">
-                        <img
-                          src={img}
-                          alt={`Image ${index + 1}`}
-                          className="max-h-full max-w-full object-contain"
-                        />
+                        <TransformWrapper>
+                          <TransformComponent>
+                            <img
+                              src={img}
+                              alt={`Image ${index + 1}`}
+                              className="max-h-full max-w-full object-contain"
+                            />
+                          </TransformComponent>
+                        </TransformWrapper>
                       </div>
                     </SwiperSlide>
                   ))}
