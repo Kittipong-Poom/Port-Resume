@@ -17,15 +17,15 @@ export const skills = [
   },
   {
     id: 2,
-    title: "Next.js (Basic)",
-  },
-  {
-    id: 3,
     title: "NodeJs(ExpressJS) (Intermediate)",
   },
   {
-    id: 4,
+    id: 3,
     title: "TailwindCSS (Intermediate)",
+  },
+  {
+    id: 4,
+    title: "Next.js (Basic)",
   },
   {
     id: 5,
@@ -41,6 +41,10 @@ export const skills = [
   },
   {
     id: 8,
+    title: "Docker (Basic)",
+  },
+  {
+    id: 9,
     title: "Vercel (Basic)",
   },
 ];
@@ -123,5 +127,27 @@ Collaborated with the UX/UI team to translate design prototypes into responsive,
         (_, i) => `/images/projects/permission/per${i + 1}.png`
       ),
     },
+  },
+  {
+    id: 5,
+    title: "Line Bot Message API",
+    position: "Backend Developer",
+    images: "/images/projects/flow_line.png",
+    description: `I developed an AI automation workflow on n8n using Docker, 
+    integrating a LINE Message API to function as a 
+    chatbot with long-term memory capabilities. All 
+    user messages are stored in a Google Sheet, enabling 
+    the AI to reference past interactions and maintain personalized, 
+    context-aware conversations over time.`,
+  },
+  {
+    id: 6,
+    title: "AI Generated Video",
+    position: "Backend Developer",
+    images: "/images/projects/video_flow.png",
+    description: `Developed “AI Video Flow” using n8n on Docker no-code automation pipeline that 
+    transforms an idea into a complete video. The workflow 
+    automates story generation, image prompt creation, and image-to-video rendering, all seamlessly 
+    integrated within n8n.`,
   },
 ];
