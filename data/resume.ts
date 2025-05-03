@@ -41,10 +41,14 @@ export const skills = [
   },
   {
     id: 8,
-    title: "Docker (Basic)",
+    title: "n8n AI Automation (Workflow Basic)",
   },
   {
     id: 9,
+    title: "Docker (Basic)",
+  },
+  {
+    id: 10,
     title: "Vercel (Basic)",
   },
 ];
@@ -67,7 +71,7 @@ export const internWorkExperience = [
 export const projects = [
   {
     id: 1,
-    title: "Ambulance Service",
+    title: "AMBULANCE SERVICE",
     position: "Fullstack Developer",
     date: "May 2023 - Oct 2024",
     images: "/images/projects/ambulance.png",
@@ -94,17 +98,17 @@ export const projects = [
     title: "NATURE TRIP",
     position: "Frontend Developer",
     date: "February 2025 - April 2025",
-    images: "/images/projects/natrure-trip.png",
+    images: "/images/projects/nature-trip.png",
     description: `Built a nature tourism recommendation platform using Next.js, TailwindCSS, TypeScript, Shadcn, and Supabase for authentication. Features include user reviews and accommodation booking.`,
     github: "https://github.com/Kittipong-Poom/TravelTrips-NextJs",
     link: "https://travel-trips-ten.vercel.app/",
   },
   {
     id: 4,
-    title: "HRIS(Human Resource Information System)",
+    title: "HRIS (Human Resource Information System)",
     position: "Frontend Developer",
-    date: "internship 6 January 2025 - 30 April 2025",
-    images: "/images/projects/hris3.png",
+    date: "Internship 6 January 2025 - 30 April 2025",
+    images: "/images/projects/hris4.png",
     description: `Developed the front-end of an HRIS (Human Resource Information System) to manage organizational employee data.
 Implemented scalable and efficient user interfaces using Nuxt.js with TypeScript.
 Collaborated with the UX/UI team to translate design prototypes into responsive, visually appealing web pages.`,
@@ -130,9 +134,9 @@ Collaborated with the UX/UI team to translate design prototypes into responsive,
   },
   {
     id: 5,
-    title: "Line Bot Message API",
+    title: "LINE BOT MESSAGE API",
     position: "Backend Developer",
-    images: "/images/projects/flow_line.png",
+    images: "/images/projects/flow_line1.5.png",
     description: `I developed an AI automation workflow on n8n using Docker, 
     integrating a LINE Message API to function as a 
     chatbot with long-term memory capabilities. All 
@@ -142,9 +146,9 @@ Collaborated with the UX/UI team to translate design prototypes into responsive,
   },
   {
     id: 6,
-    title: "AI Generated Video",
+    title: "AI GENERATED VIDEO",
     position: "Backend Developer",
-    images: "/images/projects/video_flow.png",
+    images: "/images/projects/video_flow1.png",
     description: `Developed “AI Video Flow” using n8n on Docker no-code automation pipeline that 
     transforms an idea into a complete video. The workflow 
     automates story generation, image prompt creation, and image-to-video rendering, all seamlessly 

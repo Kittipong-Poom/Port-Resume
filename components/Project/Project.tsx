@@ -61,7 +61,7 @@ const Project = () => {
   }, []);
   return (
     <div className="min-h-screen max-w-7xl container mx-auto pt-32 ">
-      <div className="flex flex-col ">
+      <div className="flex flex-col gap-y-[80px]">
         {isLoading ? (
           <Skeleton className="w-[300px] h-[100px] rounded-xl bg-gray-200 mb-6" />
         ) : (

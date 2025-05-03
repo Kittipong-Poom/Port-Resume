@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="flex items-center gap-2">
           <div className="w-6 h-6 rounded-full bg-yellow-500 mr-2"></div>
           <Link href="/" className="font-bold text-2xl">
-            Kittipong-Wong
+            Kittipong (Poom)
           </Link>
         </div>
 
