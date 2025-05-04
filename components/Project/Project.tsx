@@ -83,9 +83,24 @@ const Project = () => {
                     <p className="text-xl font-medium">{project.date}</p>
                     <p className="text-xl font-medium">{project.position}</p>
                   </div>
-
+                  <div
+                    onClick={() => {
+                      setSelectedImage(project.images);
+                      setIsOpen(true);
+                    }}
+                    className="mt-4 md:hidden overflow-hidden rounded-xl"
+                  >
+                    <Image
+                      src={project.images}
+                      alt="hero"
+                      width={2080}
+                      height={2080}
+                      className="w-[385px] h-[355px] object-top rounded-xl cursor-pointer"
+                      priority
+                    />
+                  </div>
                   <div className="md:mb-16 ">
-                    <div className="flex space-x-4 mt-4 md:mt-0 mb-4 md:hidden">
+                    <div className="flex space-x-4 mt-4 md:mt-0 mb-4 md:hidden ">
                       {project.github &&
                         renderButton(
                           project.github,
@@ -163,7 +178,7 @@ const Project = () => {
                     setSelectedImage(project.images);
                     setIsOpen(true);
                   }}
-                  className="md:p-12 p-6 w-[385px] h-[385px] md:w-[650px] md:h-[550px] overflow-hidden rounded-xl"
+                  className="md:p-12 p-6 w-[385px] h-[385px] md:w-[650px] md:h-[550px] overflow-hidden rounded-xl hidden md:block"
                 >
                   <Image
                     src={project.images}
