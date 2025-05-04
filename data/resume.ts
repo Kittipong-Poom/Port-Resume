@@ -136,13 +136,11 @@ Collaborated with the UX/UI team to translate design prototypes into responsive,
     id: 5,
     title: "LINE BOT MESSAGE API",
     position: "Backend Developer",
-    images: "/images/projects/flow_line1.5.png",
-    description: `I developed an AI automation workflow on n8n using Docker, 
-    integrating a LINE Message API to function as a 
-    chatbot with long-term memory capabilities. All 
-    user messages are stored in a Google Sheet, enabling 
-    the AI to reference past interactions and maintain personalized, 
-    context-aware conversations over time.`,
+    images: "/images/projects/flow_line2.png",
+    description: `Built an AI chatbot workflow on n8n (Docker) using the LINE Messaging API, 
+    with long-term memory by logging user messages to Google Sheets.
+    Integrated Google Drive API to store images with timestamps and synced metadata 
+    to Sheets for context-aware tracking and reference.`,
   },
   {
     id: 6,
