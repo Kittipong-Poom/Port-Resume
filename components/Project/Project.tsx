@@ -141,7 +141,7 @@ const Project = () => {
                     </div>
                     <div className="md:flex space-x-4 mt-6 md:mt-0">
                       {project.title ===
-                        "HRIS(Human Resource Information System)" && (
+                        "HRIS (Human Resource Information System)" && (
                         <div className="grid md:grid-cols-2 grid-cols-2 gap-2 ">
                           {renderActionButton("User Manual", () =>
                             openImageGroup(
