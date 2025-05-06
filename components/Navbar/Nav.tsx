@@ -10,8 +10,11 @@ const Navbar = () => {
   const [isMobileOpen, setIsMobileOpen] = React.useState<boolean>(false);
   const pathname = usePathname();
   return (
-    <div className="relative z-50">
-      <nav className="absolute top-0 left-0 w-full flex justify-between items-center p-6 text-sm font-light ">
+    <header className="relative z-50">
+      <nav
+        className="absolute top-0 left-0 w-full flex justify-between items-center p-6 text-sm font-light"
+        aria-label="Main Navigation"
+      >
         {/* ซ้าย */}
         <div className="flex items-center gap-2">
           <div className="w-6 h-6 rounded-full bg-yellow-500 mr-2"></div>
@@ -54,7 +57,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isMobileOpen && <MobileNav onClose={() => setIsMobileOpen(false)} />}
       </AnimatePresence>
-    </div>
+    </header>
   );
 };
 
