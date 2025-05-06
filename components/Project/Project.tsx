@@ -118,6 +118,34 @@ const Project = () => {
                           "hover:bg-emerald-500"
                         )}
                     </div>
+                    <div className="space-x-4 mt-6 md:mt-0 mb-4 md:hidden">
+                      {project.title ===
+                        "HRIS (Human Resource Information System)" && (
+                        <div className="grid md:grid-cols-2 grid-cols-2 gap-2 ">
+                          {renderActionButton("User Manual", () =>
+                            openImageGroup(
+                              project?.imageGroups?.userManual || []
+                            )
+                          )}
+                          {renderActionButton("WI (Working method)", () =>
+                            openImageGroup(project?.imageGroups?.wi || [])
+                          )}
+                          {renderActionButton("Announcement System", () =>
+                            openImageGroup(
+                              project?.imageGroups?.announcement || []
+                            )
+                          )}
+                          {renderActionButton("Permission", () =>
+                            openImageGroup(
+                              project?.imageGroups?.permission || []
+                            )
+                          )}
+                          {renderActionButton("Video", () =>
+                            openVideo("images/projects/video/intern.mp4")
+                          )}
+                        </div>
+                      )}
+                    </div>
                     <p className="text-sm md:w-[450px] w-[350px] md:mt-4">
                       {project.description}
                     </p>
@@ -139,7 +167,7 @@ const Project = () => {
                           "hover:bg-emerald-500"
                         )}
                     </div>
-                    <div className="md:flex space-x-4 mt-6 md:mt-0">
+                    <div className="md:flex space-x-4 mt-6 md:mt-0 hidden">
                       {project.title ===
                         "HRIS (Human Resource Information System)" && (
                         <div className="grid md:grid-cols-2 grid-cols-2 gap-2 ">
