@@ -22,7 +22,7 @@ const Hero = () => {
             <div className="flex md:justify-end justify-center">
               <div className="w-[300px] h-[300px] md:w-[500px] md:h-[500px] rounded-full overflow-hidden shadow-lg">
                 <Image
-                  src="/images/me.PNG"
+                  src="/images/uniform.jpg"
                   alt="hero"
                   width={500}
                   height={500}
@@ -52,9 +52,10 @@ const Hero = () => {
               {loadingSkeleton ? (
                 <Skeleton className="w-[500px] h-36 bg-gray-200" />
               ) : (
-                `  Recent Software Engineering Graduate From Mae Fah Luang
-              University. Passionate About Front-End & Back-End Development.
-              Experienced With Nuxt.js, Next.js, And Responsive Web Design.`
+                `Software Engineer with hands-on experience in Full-Stack development. Experienced in building Responsive
+                  Web Applications and supporting real-world systems used in production. Skilled in collaborating 
+                  with cross-functional teams to deliver reliable and user-focused solutions.
+                  `
               )}
             </span>
             {/* ปุ่ม 3 ปุ่ม */}

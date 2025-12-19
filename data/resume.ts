@@ -25,19 +25,15 @@ export const skills = [
   },
   {
     id: 4,
-    title: "Next.js (Basic)",
+    title: "Next.js",
   },
   {
     id: 5,
-    title: "TypeScript (Basic)",
+    title: "TypeScript ",
   },
   {
     id: 6,
-    title: "MySQL (Basic)",
-  },
-  {
-    id: 7,
-    title: "Authenticate (Superbase) (Basic)",
+    title: "MySQL ",
   },
   {
     id: 8,
@@ -47,15 +43,22 @@ export const skills = [
     id: 9,
     title: "Docker (Basic)",
   },
-  {
-    id: 10,
-    title: "Vercel (Basic)",
-  },
 ];
 
 export const internWorkExperience = [
   {
     id: 1,
+    title: "Work Experience",
+    position: "Fullstack Developer",
+    company: "Affinitech Co.,LTD",
+    year: "June 2025 - Present",
+    description: `Developed blood bank and medical laboratory management systems supporting end-to-end workflows from donor registration to result delivery for hospitals.
+      Designed and analyzed database structures to ensure efficient, reliable system operations.
+      Provided client training on system usage and basic troubleshooting to ensure smooth adoption.
+      Collaborated with clients to gather and define requirements for system enhancements and new features.`,
+  },
+  {
+    id: 2,
     title: "Internship",
     position: "Frontend Developer",
     company: "Radius Co., Ltd.",
@@ -151,5 +154,39 @@ Collaborated with the UX/UI team to translate design prototypes into responsive,
     transforms an idea into a complete video. The workflow 
     automates story generation, image prompt creation, and image-to-video rendering, all seamlessly 
     integrated within n8n.`,
+  },
+  {
+    id: 7,
+    title: "Blood Bank Management System",
+    position: "Fullstack Developer",
+    images: "/images/projects/dashboard1.jpeg",
+    description: `Designed and analyzed a blood bank management system to support 
+    laboratory staff in managing blood donation records, patient 
+    information, and blood inventory, with the objective of improving 
+    operational efficiency and data accuracy.`,
+  },
+  {
+    id: 8,
+    title: "Blood Bank Mobile Web Application",
+    position: "Fullstack Developer",
+    images: "/images/projects/mobile-blood.png",
+    description: `Designed and developed a mobile-responsive blood bank web system to support 
+    hospital operations, enhancing accuracy, safety, and usability for 
+    medical staff, with support for barcode scanning via mobile device cameras.`,
+  },
+  {
+    id: 9,
+    title: "Blood Donor Registration Form",
+    position: "Fullstack Developer",
+    images: "/images/projects/donation/donation.png",
+    description: `Designed and developed a blood donor registration web form using Google Apps Script, 
+    supporting donor data entry, identity verification 
+    through facial photo capture, health screening questionnaires, and electronic signature submission.`,
+    imageGroups: {
+      donation: Array.from(
+        { length: 3 },
+        (_, i) => `/images/projects/donation/donation${i + 1}.png`
+      ),
+    },
   },
 ];

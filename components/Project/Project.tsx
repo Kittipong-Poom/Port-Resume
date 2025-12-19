@@ -145,6 +145,13 @@ const Project = () => {
                           )}
                         </div>
                       )}
+                      {project.title === "Blood Donor Registration Form" && (
+                        <div className="grid md:grid-cols-2 grid-cols-2 gap-2 ">
+                          {renderActionButton("View Images", () =>
+                            openImageGroup(project?.imageGroups?.donation || [])
+                          )}
+                        </div>
+                      )}
                     </div>
                     <p className="text-sm md:w-[450px] w-[350px] md:mt-4">
                       {project.description}
@@ -194,6 +201,13 @@ const Project = () => {
                           )}
                         </div>
                       )}
+                      {project.title === "Blood Donor Registration Form" && (
+                        <div className="grid md:grid-cols-2 grid-cols-2 gap-2 ">
+                          {renderActionButton("View Images", () =>
+                            openImageGroup(project?.imageGroups?.donation || [])
+                          )}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -211,8 +225,8 @@ const Project = () => {
                   <Image
                     src={project.images}
                     alt="hero"
-                    width={2080}
-                    height={2080}
+                    width={1080}
+                    height={1080}
                     className="w-auto h-auto object-cover object-top rounded-xl cursor-pointer"
                     priority
                     onLoadingComplete={() => setIsImageLoading(false)}
