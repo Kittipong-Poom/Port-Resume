@@ -178,7 +178,7 @@ Collaborated with the UX/UI team to translate design prototypes into responsive,
     id: 9,
     title: "Blood Donor Registration Form",
     position: "Fullstack Developer",
-    images: "/images/projects/donation/donation.png",
+    images: "/images/projects/donation/donation1.png",
     description: `Designed and developed a blood donor registration web form using Google Apps Script, 
     supporting donor data entry, identity verification 
     through facial photo capture, health screening questionnaires, and electronic signature submission.`,
